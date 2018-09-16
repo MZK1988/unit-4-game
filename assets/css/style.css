@@ -1,19 +1,38 @@
+#header {
+    background-color: brown;
+    color: white;
 
-body, html {
-    height: 100%;
-    margin: 0;
 }
 
+.description {
+    color: white;
+}
 
-.bg { 
-    /* The image used */
-    background-image: url("../images/backGround.jpg");
+#descriptionWrapper {
+    background-color: blueviolet;
+}
 
-    /* Full height */
-    height: 100%; 
+#randomNumber {
+    padding: 10px;
+    background-color: green;
+    margin-right: 5px;
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+#scoreCard {
+    padding: 10px;
+    background-color: lightblue;
+}
+
+#crystalOne {
+    margin-right: 5px;
+}
+#crystalTwo {
+    margin-right: 5px;
+}
+#crystalThree {
+    margin-right: 5px;
+}
+#crystalThree {
+    margin-right: 5px;
 }
