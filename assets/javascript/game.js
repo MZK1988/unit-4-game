@@ -28,36 +28,115 @@ $(document).ready(function() {
 
     $("#computerGuess").text(computerGuess);
 
+
     $("#crystalOne").on("click", function() {
         $("#totalScore").text(totalScore + crystalOne);
         totalScore = totalScore + crystalOne;
+        console.log(computerGuess);
+        console.log(totalScore);
+        if (computerGuess === totalScore) {
+            alert("You Won! Your Total Score will reset to zero and all the crystals will have a new random number assigned to them on the next click.  Also, your matching number will change!")
+            winCount++
+            $("#wins").text("Wins: " + winCount)
+            totalScore = 0
+            crystalOne = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalTwo = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalThree = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalFour = Math.floor(Math.random() * (12 - 1) + 1);
+            computerGuess = Math.floor(Math.random() * (120 - 19) + 19)
+            $("#computerGuess").text(computerGuess); 
+        } else if (totalScore > computerGuess) {
+            alert("You lost! Your Total Score will reset to zero, but your crystal numbers and matching number will remain the same.")
+            loseCount++
+            $("#losses").text("Losses: " + loseCount)
+            totalScore = 0
+            $("#totalScore").text(totalScore);    
+        }
+        else { return false
+    
+        }
     })
+
 
     $("#crystalTwo").on("click", function() {
         $("#totalScore").text(totalScore + crystalTwo);
         totalScore = totalScore + crystalTwo;
+        if (computerGuess === totalScore) {
+            alert("You Won! Your Total Score will reset to zero and all the crystals will have a new random number assigned to them on the next click.  Also, your matching number will change!")
+            winCount++
+            $("#wins").text("Wins: " + winCount)
+            totalScore = 0
+            crystalOne = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalTwo = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalThree = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalFour = Math.floor(Math.random() * (12 - 1) + 1);
+            computerGuess = Math.floor(Math.random() * (120 - 19) + 19)
+            computerGuess = Math.floor(Math.random() * (120 - 19) + 19);
+            $("#computerGuess").text(computerGuess);
+        } else if (totalScore > computerGuess) {
+            alert("You lost! Your Total Score will reset to zero, but your crystal numbers and matching number will remain the same.")
+            loseCount++
+            $("#losses").text("Losses: " + loseCount)
+            totalScore = 0    
+        }
+        else { return false
+    
+        }
     })
 
     $("#crystalThree").on("click", function() {
         $("#totalScore").text(totalScore + crystalThree);
         totalScore = totalScore + crystalThree;
+        if (computerGuess === totalScore) {
+            alert("You Won! Your Total Score will reset to zero and all the crystals will have a new random number assigned to them on the next click.  Also, your matching number will change!")
+            winCount++
+            totalScore = 0
+            crystalOne = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalTwo = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalThree = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalFour = Math.floor(Math.random() * (12 - 1) + 1);
+            computerGuess = Math.floor(Math.random() * (120 - 19) + 19)
+            $("#wins").text("Wins: " + winCount)
+            computerGuess = Math.floor(Math.random() * (120 - 19) + 19);
+            $("#computerGuess").text(computerGuess);
+            
+        } else if (totalScore > computerGuess) {
+            alert("You lost! Your Total Score will reset to zero, but your crystal numbers and matching number will remain the same.")
+            loseCount++
+            $("#losses").text("Losses: " + loseCount)
+            totalScore = 0    
+        }
+        else { return false
+    
+        }
     })
     
     $("#crystalFour").on("click", function() {
         $("#totalScore").text(totalScore + crystalFour);
         totalScore = totalScore + crystalFour;
-        if (computerGuess = totalScore) {
-            winCount++;
-            $("#wins").text("Wins: " + winCount);
-            totalScore = 0; }
-        else if (totalScore > computerGuess) {
-            loseCount++;
-            $("#losses").text("Losses: " + loseCount);
-
-
-        
+        if (computerGuess === totalScore) {
+            alert("You Won! Your Total Score will reset to zero and all the crystals will have a new random number assigned to them on the next click.  Also, your matching number will change!")
+            winCount++
+            totalScore = 0
+            crystalOne = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalTwo = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalThree = Math.floor(Math.random() * (12 - 1) + 1);
+            crystalFour = Math.floor(Math.random() * (12 - 1) + 1);
+            computerGuess = Math.floor(Math.random() * (120 - 19) + 19)
+            $("#wins").text("Wins: " + winCount) 
+            computerGuess = Math.floor(Math.random() * (120 - 19) + 19);
+            $("#computerGuess").text(computerGuess);
+        } else if (totalScore > computerGuess) {
+            alert("You lost! Your Total Score will reset to zero, but your crystal numbers and matching number will remain the same.")
+            loseCount++
+            $("#losses").text("Losses: " + loseCount)
+            totalScore = 0    
+        }
+        else { return false
+    
         }
     })
+
 
 
 
